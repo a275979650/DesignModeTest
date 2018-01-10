@@ -11,10 +11,10 @@ using DesignMode.AdapterPattern;
 using DesignMode.BridgePattern;
 using DesignMode.BuilderPattern;
 using DesignMode.CompositePattern;
+using DesignMode.DecoratorPattern;
 using DesignMode.FilterPattern;
 using DesignMode.PrototypePattern;
 using DesignMode.SingletonPattern;
-using Shape = DesignMode.PrototypePattern.Shape;
 
 namespace DesignMode
 {
@@ -121,13 +121,13 @@ namespace DesignMode
             string str = "";
             ShapeCache.loadCache();
 
-            Shape clonedShape = (Shape)ShapeCache.getShape("1");
+            PrototypePattern.Shape clonedShape = (PrototypePattern.Shape)ShapeCache.getShape("1");
             str += "Shape : " + clonedShape.Type + "\r\n";
 
-            Shape clonedShape2 = (Shape)ShapeCache.getShape("2");
+            PrototypePattern.Shape clonedShape2 = (PrototypePattern.Shape)ShapeCache.getShape("2");
             str += "Shape : " + clonedShape2.Type + "\r\n";
 
-            Shape clonedShape3 = (Shape)ShapeCache.getShape("3");
+            PrototypePattern.Shape clonedShape3 = (PrototypePattern.Shape)ShapeCache.getShape("3");
             str += "Shape : " + clonedShape3.Type + "\r\n";
             tbOutWindow.Text = str;
         }
@@ -235,6 +235,25 @@ namespace DesignMode
                     str += employee + "\r\n";
                 }
             }
+            tbOutWindow.Text = str;
+        }
+
+        private void btDecoratorPattern_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            DesignMode.DecoratorPattern.IShape circle = new DecoratorPattern.Circle();
+
+            DesignMode.DecoratorPattern.IShape redCircle = new DecoratorPattern.RedShapeDecorator(new DecoratorPattern.Circle());
+
+            DecoratorPattern.IShape redRectangle = new DesignMode.DecoratorPattern.RedShapeDecorator(new DecoratorPattern.Rectangle());
+            str += "Circle with normal border" + "\r\n";
+            str += circle.draw() + "\r\n";
+
+            str += "Circle of red border" + "\r\n";
+            str += redCircle.draw() + "\r\n";
+
+            str += "Rectangle of red border" + "\r\n";
+            str += redRectangle.draw() + "\r\n";
             tbOutWindow.Text = str;
         }
     }

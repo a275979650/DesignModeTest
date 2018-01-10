@@ -149,6 +149,7 @@
             this.btDecoratorPattern.TabIndex = 9;
             this.btDecoratorPattern.Text = "装饰器模式";
             this.btDecoratorPattern.UseVisualStyleBackColor = true;
+            this.btDecoratorPattern.Click += new System.EventHandler(this.btDecoratorPattern_Click);
             // 
             // btFacadePattern
             // 
