@@ -75,6 +75,11 @@
     <Compile Include="DecoratorPattern\Rectangle.cs" />
     <Compile Include="DecoratorPattern\RedShapeDecorator.cs" />
     <Compile Include="DecoratorPattern\ShapeDecorator.cs" />
+    <Compile Include="FacadePattern\Circle.cs" />
+    <Compile Include="FacadePattern\IShape.cs" />
+    <Compile Include="FacadePattern\Rectangle.cs" />
+    <Compile Include="FacadePattern\ShapeMaker.cs" />
+    <Compile Include="FacadePattern\Square.cs" />
     <Compile Include="FactoryModeAndAbstractFactory\Circle.cs" />
     <Compile Include="FactoryModeAndAbstractFactory\AbstractFactory\IAbstractFactory.cs" />
     <Compile Include="FactoryModeAndAbstractFactory\AbstractFactory\ColorFactory.cs" />

@@ -159,6 +159,7 @@
             this.btFacadePattern.TabIndex = 10;
             this.btFacadePattern.Text = "外观模式";
             this.btFacadePattern.UseVisualStyleBackColor = true;
+            this.btFacadePattern.Click += new System.EventHandler(this.btFacadePattern_Click);
             // 
             // btFlyweightPattern
             // 

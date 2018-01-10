@@ -12,6 +12,7 @@ using DesignMode.BridgePattern;
 using DesignMode.BuilderPattern;
 using DesignMode.CompositePattern;
 using DesignMode.DecoratorPattern;
+using DesignMode.FacadePattern;
 using DesignMode.FilterPattern;
 using DesignMode.PrototypePattern;
 using DesignMode.SingletonPattern;
@@ -254,6 +255,17 @@ namespace DesignMode
 
             str += "Rectangle of red border" + "\r\n";
             str += redRectangle.draw() + "\r\n";
+            tbOutWindow.Text = str;
+        }
+
+        private void btFacadePattern_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            ShapeMaker shapeMaker = new ShapeMaker();
+
+            str += shapeMaker.drawCircle() + "\r\n";
+            str += shapeMaker.drawRectangle() + "\r\n";
+            str += shapeMaker.drawSquare() + "\r\n";
             tbOutWindow.Text = str;
         }
     }
