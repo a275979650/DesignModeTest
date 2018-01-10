@@ -43,6 +43,7 @@
             this.btFlyweightPattern = new System.Windows.Forms.Button();
             this.btProxyPattern = new System.Windows.Forms.Button();
             this.btChainofResponsibilityPattern = new System.Windows.Forms.Button();
+            this.btCommandPattern = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btFactory
@@ -193,11 +194,22 @@
             this.btChainofResponsibilityPattern.UseVisualStyleBackColor = true;
             this.btChainofResponsibilityPattern.Click += new System.EventHandler(this.btChainofResponsibilityPattern_Click);
             // 
+            // btCommandPattern
+            // 
+            this.btCommandPattern.Location = new System.Drawing.Point(185, 101);
+            this.btCommandPattern.Name = "btCommandPattern";
+            this.btCommandPattern.Size = new System.Drawing.Size(75, 23);
+            this.btCommandPattern.TabIndex = 14;
+            this.btCommandPattern.Text = "命令模式";
+            this.btCommandPattern.UseVisualStyleBackColor = true;
+            this.btCommandPattern.Click += new System.EventHandler(this.btCommandPattern_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 399);
+            this.Controls.Add(this.btCommandPattern);
             this.Controls.Add(this.btChainofResponsibilityPattern);
             this.Controls.Add(this.btProxyPattern);
             this.Controls.Add(this.btFlyweightPattern);
@@ -237,6 +249,7 @@
         private System.Windows.Forms.Button btFlyweightPattern;
         private System.Windows.Forms.Button btProxyPattern;
         private System.Windows.Forms.Button btChainofResponsibilityPattern;
+        private System.Windows.Forms.Button btCommandPattern;
     }
 }
 

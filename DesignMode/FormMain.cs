@@ -11,6 +11,7 @@ using DesignMode.AdapterPattern;
 using DesignMode.BridgePattern;
 using DesignMode.BuilderPattern;
 using DesignMode.ChainofResponsibilityPattern;
+using DesignMode.CommandPattern;
 using DesignMode.CompositePattern;
 using DesignMode.DecoratorPattern;
 using DesignMode.FacadePattern;
@@ -343,6 +344,20 @@ namespace DesignMode
             fileLogger.setNextLogger(consoleLogger);
 
             return errorLogger;
+        }
+
+        private void btCommandPattern_Click(object sender, EventArgs e)
+        {
+            Stock abcStock = new Stock();
+
+            BuyStock buyStockOrder = new BuyStock(abcStock);
+            SellStock sellStockOrder = new SellStock(abcStock);
+
+            Broker broker = new Broker();
+            broker.takeOrder(buyStockOrder);
+            broker.takeOrder(sellStockOrder);
+
+            tbOutWindow.Text =  broker.placeOrders();
         }
     }
 }
