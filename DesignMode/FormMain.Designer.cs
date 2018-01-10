@@ -41,6 +41,7 @@
             this.btDecoratorPattern = new System.Windows.Forms.Button();
             this.btFacadePattern = new System.Windows.Forms.Button();
             this.btFlyweightPattern = new System.Windows.Forms.Button();
+            this.btProxyPattern = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btFactory
@@ -171,11 +172,22 @@
             this.btFlyweightPattern.UseVisualStyleBackColor = true;
             this.btFlyweightPattern.Click += new System.EventHandler(this.btFlyweightPattern_Click);
             // 
+            // btProxyPattern
+            // 
+            this.btProxyPattern.Location = new System.Drawing.Point(12, 101);
+            this.btProxyPattern.Name = "btProxyPattern";
+            this.btProxyPattern.Size = new System.Drawing.Size(75, 23);
+            this.btProxyPattern.TabIndex = 12;
+            this.btProxyPattern.Text = "代理模式";
+            this.btProxyPattern.UseVisualStyleBackColor = true;
+            this.btProxyPattern.Click += new System.EventHandler(this.btProxyPattern_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 399);
+            this.Controls.Add(this.btProxyPattern);
             this.Controls.Add(this.btFlyweightPattern);
             this.Controls.Add(this.btFacadePattern);
             this.Controls.Add(this.btDecoratorPattern);
@@ -211,6 +223,7 @@
         private System.Windows.Forms.Button btDecoratorPattern;
         private System.Windows.Forms.Button btFacadePattern;
         private System.Windows.Forms.Button btFlyweightPattern;
+        private System.Windows.Forms.Button btProxyPattern;
     }
 }
 

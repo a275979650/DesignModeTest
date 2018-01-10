@@ -116,6 +116,9 @@
     <Compile Include="PrototypePattern\Shape.cs" />
     <Compile Include="PrototypePattern\ShapeCache.cs" />
     <Compile Include="PrototypePattern\Square.cs" />
+    <Compile Include="ProxyPattern\IImage.cs" />
+    <Compile Include="ProxyPattern\ProxyImage.cs" />
+    <Compile Include="ProxyPattern\RealImage.cs" />
     <Compile Include="SingletonPattern\SingleObject.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

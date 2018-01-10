@@ -15,6 +15,7 @@ using DesignMode.DecoratorPattern;
 using DesignMode.FacadePattern;
 using DesignMode.FilterPattern;
 using DesignMode.PrototypePattern;
+using DesignMode.ProxyPattern;
 using DesignMode.SingletonPattern;
 
 namespace DesignMode
@@ -300,6 +301,18 @@ namespace DesignMode
         private static int getRandomY()
         {
             return (int)(new Random().Next(0, 5) * 100);
+        }
+
+        private void btProxyPattern_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            IImage image = new ProxyImage("test_10mb.jpg");
+
+            //图像将从磁盘加载
+            str += image.display()+"\r\n";
+            //图像将无法从磁盘加载
+            str += image.display()+"\r\n";
+            tbOutWindow.Text = str;
         }
     }
 }
