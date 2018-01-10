@@ -42,6 +42,7 @@
             this.btFacadePattern = new System.Windows.Forms.Button();
             this.btFlyweightPattern = new System.Windows.Forms.Button();
             this.btProxyPattern = new System.Windows.Forms.Button();
+            this.btChainofResponsibilityPattern = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btFactory
@@ -182,11 +183,22 @@
             this.btProxyPattern.UseVisualStyleBackColor = true;
             this.btProxyPattern.Click += new System.EventHandler(this.btProxyPattern_Click);
             // 
+            // btChainofResponsibilityPattern
+            // 
+            this.btChainofResponsibilityPattern.Location = new System.Drawing.Point(93, 101);
+            this.btChainofResponsibilityPattern.Name = "btChainofResponsibilityPattern";
+            this.btChainofResponsibilityPattern.Size = new System.Drawing.Size(75, 23);
+            this.btChainofResponsibilityPattern.TabIndex = 13;
+            this.btChainofResponsibilityPattern.Text = "责任链模式";
+            this.btChainofResponsibilityPattern.UseVisualStyleBackColor = true;
+            this.btChainofResponsibilityPattern.Click += new System.EventHandler(this.btChainofResponsibilityPattern_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 399);
+            this.Controls.Add(this.btChainofResponsibilityPattern);
             this.Controls.Add(this.btProxyPattern);
             this.Controls.Add(this.btFlyweightPattern);
             this.Controls.Add(this.btFacadePattern);
@@ -224,6 +236,7 @@
         private System.Windows.Forms.Button btFacadePattern;
         private System.Windows.Forms.Button btFlyweightPattern;
         private System.Windows.Forms.Button btProxyPattern;
+        private System.Windows.Forms.Button btChainofResponsibilityPattern;
     }
 }
 

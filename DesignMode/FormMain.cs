@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DesignMode.AdapterPattern;
 using DesignMode.BridgePattern;
 using DesignMode.BuilderPattern;
+using DesignMode.ChainofResponsibilityPattern;
 using DesignMode.CompositePattern;
 using DesignMode.DecoratorPattern;
 using DesignMode.FacadePattern;
@@ -313,6 +314,35 @@ namespace DesignMode
             //图像将无法从磁盘加载
             str += image.display()+"\r\n";
             tbOutWindow.Text = str;
+        }
+
+        private void btChainofResponsibilityPattern_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            AbstractLogger loggerChain = getChainOfLoggers();
+
+            str+=loggerChain.logMessage(AbstractLogger.INFO,
+                "This is an information.");
+
+            str += loggerChain.logMessage(AbstractLogger.DEBUG,
+                "This is an debug level information.");
+
+            str += loggerChain.logMessage(AbstractLogger.ERROR,
+                "This is an error information.");
+            tbOutWindow.Text = str;
+        }
+
+        private static AbstractLogger getChainOfLoggers()
+        {
+
+            AbstractLogger errorLogger = new ErrorLogger(AbstractLogger.ERROR);
+            AbstractLogger fileLogger = new FileLogger(AbstractLogger.DEBUG);
+            AbstractLogger consoleLogger = new ConsoleLogger(AbstractLogger.INFO);
+
+            errorLogger.setNextLogger(fileLogger);
+            fileLogger.setNextLogger(consoleLogger);
+
+            return errorLogger;
         }
     }
 }

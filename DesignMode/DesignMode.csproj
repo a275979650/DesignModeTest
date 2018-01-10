@@ -69,6 +69,10 @@
     <Compile Include="BuilderPattern\Pepsi.cs" />
     <Compile Include="BuilderPattern\VegBurger.cs" />
     <Compile Include="BuilderPattern\Wrapper.cs" />
+    <Compile Include="ChainofResponsibilityPattern\AbstractLogger.cs" />
+    <Compile Include="ChainofResponsibilityPattern\ConsoleLogger.cs" />
+    <Compile Include="ChainofResponsibilityPattern\ErrorLogger.cs" />
+    <Compile Include="ChainofResponsibilityPattern\FileLogger.cs" />
     <Compile Include="CompositePattern\Employee.cs" />
     <Compile Include="DecoratorPattern\Circle.cs" />
     <Compile Include="DecoratorPattern\IShape.cs" />
