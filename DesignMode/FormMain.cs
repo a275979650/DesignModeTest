@@ -268,5 +268,38 @@ namespace DesignMode
             str += shapeMaker.drawSquare() + "\r\n";
             tbOutWindow.Text = str;
         }
+        /// <summary>
+        /// 用于享元模式，放靠近点，实际应用按规范编写
+        /// </summary>
+        private static readonly string[] colors = { "Red", "Green", "Blue", "White", "Black" };
+        private void btFlyweightPattern_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            string s = "";
+            for (int i = 0; i < 20; ++i)
+            {
+                FlyweightPattern.Circle circle =
+                    (FlyweightPattern.Circle)FlyweightPattern.ShapeFactory.getCircle(getRandomColor(), ref s);
+                circle.X = getRandomX();
+                circle.Y = getRandomY();
+                circle.Radius = 100;
+                str+=s+"\r\n"+circle.draw();
+            }
+            tbOutWindow.Text = str;
+
+        }
+        private static string getRandomColor()
+        {
+            int i = new Random().Next(colors.Length);
+            return colors[i];
+        }
+        private static int getRandomX()
+        {
+            return (int)(new Random().Next(0, 5) * 100);
+        }
+        private static int getRandomY()
+        {
+            return (int)(new Random().Next(0, 5) * 100);
+        }
     }
 }

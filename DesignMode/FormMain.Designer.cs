@@ -169,6 +169,7 @@
             this.btFlyweightPattern.TabIndex = 11;
             this.btFlyweightPattern.Text = "享元模式";
             this.btFlyweightPattern.UseVisualStyleBackColor = true;
+            this.btFlyweightPattern.Click += new System.EventHandler(this.btFlyweightPattern_Click);
             // 
             // FormMain
             // 

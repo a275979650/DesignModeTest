@@ -96,6 +96,9 @@
     <Compile Include="FilterPattern\ICriteria.cs" />
     <Compile Include="FilterPattern\OrCriteria.cs" />
     <Compile Include="FilterPattern\Person.cs" />
+    <Compile Include="FlyweightPattern\Circle.cs" />
+    <Compile Include="FlyweightPattern\IShape.cs" />
+    <Compile Include="FlyweightPattern\ShapeFactory.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
