@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{211597C4-05F1-42E9-B3B3-9667BBF812B6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesignMode</RootNamespace>
+    <AssemblyName>DesignMode</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdapterPattern\AudioPlayer.cs" />
+    <Compile Include="AdapterPattern\IAdvancedMediaPlayer.cs" />
+    <Compile Include="AdapterPattern\IMediaPlayer.cs" />
+    <Compile Include="AdapterPattern\MediaAdapter.cs" />
+    <Compile Include="AdapterPattern\Mp4Player.cs" />
+    <Compile Include="AdapterPattern\VlcPlayer.cs" />
+    <Compile Include="BridgePattern\BlueCircle.cs" />
+    <Compile Include="BridgePattern\Circle.cs" />
+    <Compile Include="BridgePattern\GreenCircle.cs" />
+    <Compile Include="BridgePattern\IDrawAPI.cs" />
+    <Compile Include="BridgePattern\RedCircle.cs" />
+    <Compile Include="BridgePattern\Shape.cs" />
+    <Compile Include="BuilderPattern\Bottle.cs" />
+    <Compile Include="BuilderPattern\Burger.cs" />
+    <Compile Include="BuilderPattern\ChickenBurger.cs" />
+    <Compile Include="BuilderPattern\Coke.cs" />
+    <Compile Include="BuilderPattern\ColdDrink.cs" />
+    <Compile Include="BuilderPattern\Meal.cs" />
+    <Compile Include="BuilderPattern\MealBuilder.cs" />
+    <Compile Include="BuilderPattern\MyItem.cs" />
+    <Compile Include="BuilderPattern\IPacking.cs" />
+    <Compile Include="BuilderPattern\Pepsi.cs" />
+    <Compile Include="BuilderPattern\VegBurger.cs" />
+    <Compile Include="BuilderPattern\Wrapper.cs" />
+    <Compile Include="FactoryModeAndAbstractFactory\Circle.cs" />
+    <Compile Include="FactoryModeAndAbstractFactory\AbstractFactory\IAbstractFactory.cs" />
+    <Compile Include="FactoryModeAndAbstractFactory\AbstractFactory\ColorFactory.cs" />
+    <Compile Include="FactoryModeAndAbstractFactory\AbstractFactory\FactoryProducer.cs" />
+    <Compile Include="FactoryModeAndAbstractFactory\AbstractFactory\ShapeFactory2.cs" />
+    <Compile Include="FactoryModeAndAbstractFactory\Blue.cs" />
+    <Compile Include="FactoryModeAndAbstractFactory\Green.cs" />
+    <Compile Include="FactoryModeAndAbstractFactory\IColor.cs" />
+    <Compile Include="FactoryModeAndAbstractFactory\Red.cs" />
+    <Compile Include="FilterPattern\AndCriteria.cs" />
+    <Compile Include="FilterPattern\CriteriaFemale.cs" />
+    <Compile Include="FilterPattern\CriteriaMale.cs" />
+    <Compile Include="FilterPattern\CriteriaSingle.cs" />
+    <Compile Include="FilterPattern\ICriteria.cs" />
+    <Compile Include="FilterPattern\OrCriteria.cs" />
+    <Compile Include="FilterPattern\Person.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FactoryModeAndAbstractFactory\Rectangle.cs" />
+    <Compile Include="FactoryModeAndAbstractFactory\IShape.cs" />
+    <Compile Include="FactoryModeAndAbstractFactory\FactoryMode\ShapeFactory.cs" />
+    <Compile Include="FactoryModeAndAbstractFactory\Square.cs" />
+    <Compile Include="PrototypePattern\Circle.cs" />
+    <Compile Include="PrototypePattern\Rectangle.cs" />
+    <Compile Include="PrototypePattern\Shape.cs" />
+    <Compile Include="PrototypePattern\ShapeCache.cs" />
+    <Compile Include="PrototypePattern\Square.cs" />
+    <Compile Include="SingletonPattern\SingleObject.cs" />
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
