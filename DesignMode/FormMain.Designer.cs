@@ -139,6 +139,7 @@
             this.btCompositePattern.TabIndex = 8;
             this.btCompositePattern.Text = "组合模式";
             this.btCompositePattern.UseVisualStyleBackColor = true;
+            this.btCompositePattern.Click += new System.EventHandler(this.btCompositePattern_Click);
             // 
             // btDecoratorPattern
             // 
