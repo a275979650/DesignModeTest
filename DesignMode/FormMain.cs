@@ -16,6 +16,7 @@ using DesignMode.CompositePattern;
 using DesignMode.DecoratorPattern;
 using DesignMode.FacadePattern;
 using DesignMode.FilterPattern;
+using DesignMode.InterpreterPattern;
 using DesignMode.PrototypePattern;
 using DesignMode.ProxyPattern;
 using DesignMode.SingletonPattern;
@@ -358,6 +359,32 @@ namespace DesignMode
             broker.takeOrder(sellStockOrder);
 
             tbOutWindow.Text =  broker.placeOrders();
+        }
+        //规则：Robert 和 John 是男性
+        public static IExpression getMaleExpression()
+        {
+            IExpression robert = new TerminalExpression("Robert");
+            IExpression john = new TerminalExpression("John");
+            return new OrExpression(robert, john);
+        }
+
+        //规则：Julie 是一个已婚的女性
+        public static IExpression getMarriedWomanExpression()
+        {
+            IExpression julie = new TerminalExpression("Julie");
+            IExpression married = new TerminalExpression("Married");
+            return new AndExpression(julie, married);
+        }
+        private void btInterpreterPattern_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            IExpression isMale = getMaleExpression();
+            IExpression isMarriedWoman = getMarriedWomanExpression();
+
+            str += "John is male? " + isMale.interpret("John")+"\r\n";
+            str += "Julie is a married women? "
+                               + isMarriedWoman.interpret("Married Julie")+"\r\n";
+            tbOutWindow.Text = str;
         }
     }
 }
