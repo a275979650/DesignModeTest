@@ -118,6 +118,9 @@
     <Compile Include="InterpreterPattern\IExpression.cs" />
     <Compile Include="InterpreterPattern\OrExpression.cs" />
     <Compile Include="InterpreterPattern\TerminalExpression.cs" />
+    <Compile Include="IteratorPattern\IContainer.cs" />
+    <Compile Include="IteratorPattern\IIterator.cs" />
+    <Compile Include="IteratorPattern\NameRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FactoryModeAndAbstractFactory\Rectangle.cs" />

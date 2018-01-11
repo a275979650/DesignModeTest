@@ -17,6 +17,7 @@ using DesignMode.DecoratorPattern;
 using DesignMode.FacadePattern;
 using DesignMode.FilterPattern;
 using DesignMode.InterpreterPattern;
+using DesignMode.IteratorPattern;
 using DesignMode.PrototypePattern;
 using DesignMode.ProxyPattern;
 using DesignMode.SingletonPattern;
@@ -384,6 +385,19 @@ namespace DesignMode
             str += "John is male? " + isMale.interpret("John")+"\r\n";
             str += "Julie is a married women? "
                                + isMarriedWoman.interpret("Married Julie")+"\r\n";
+            tbOutWindow.Text = str;
+        }
+
+        private void btIteratorPattern_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            NameRepository namesRepository = new NameRepository();
+
+            for (IIterator iter = namesRepository.getIterator(); iter.hasNext();)
+            {
+                String name = (String)iter.next();
+                str+="Name : " + name+"\r\n";
+            }
             tbOutWindow.Text = str;
         }
     }

@@ -45,6 +45,7 @@
             this.btChainofResponsibilityPattern = new System.Windows.Forms.Button();
             this.btCommandPattern = new System.Windows.Forms.Button();
             this.btInterpreterPattern = new System.Windows.Forms.Button();
+            this.btIteratorPattern = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btFactory
@@ -215,11 +216,22 @@
             this.btInterpreterPattern.UseVisualStyleBackColor = true;
             this.btInterpreterPattern.Click += new System.EventHandler(this.btInterpreterPattern_Click);
             // 
+            // btIteratorPattern
+            // 
+            this.btIteratorPattern.Location = new System.Drawing.Point(347, 101);
+            this.btIteratorPattern.Name = "btIteratorPattern";
+            this.btIteratorPattern.Size = new System.Drawing.Size(75, 23);
+            this.btIteratorPattern.TabIndex = 16;
+            this.btIteratorPattern.Text = "迭代器模式";
+            this.btIteratorPattern.UseVisualStyleBackColor = true;
+            this.btIteratorPattern.Click += new System.EventHandler(this.btIteratorPattern_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 399);
+            this.Controls.Add(this.btIteratorPattern);
             this.Controls.Add(this.btInterpreterPattern);
             this.Controls.Add(this.btCommandPattern);
             this.Controls.Add(this.btChainofResponsibilityPattern);
@@ -263,6 +275,7 @@
         private System.Windows.Forms.Button btChainofResponsibilityPattern;
         private System.Windows.Forms.Button btCommandPattern;
         private System.Windows.Forms.Button btInterpreterPattern;
+        private System.Windows.Forms.Button btIteratorPattern;
     }
 }
 
