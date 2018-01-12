@@ -46,6 +46,7 @@
             this.btCommandPattern = new System.Windows.Forms.Button();
             this.btInterpreterPattern = new System.Windows.Forms.Button();
             this.btIteratorPattern = new System.Windows.Forms.Button();
+            this.btMediatorPattern = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btFactory
@@ -226,11 +227,22 @@
             this.btIteratorPattern.UseVisualStyleBackColor = true;
             this.btIteratorPattern.Click += new System.EventHandler(this.btIteratorPattern_Click);
             // 
+            // btMediatorPattern
+            // 
+            this.btMediatorPattern.Location = new System.Drawing.Point(428, 101);
+            this.btMediatorPattern.Name = "btMediatorPattern";
+            this.btMediatorPattern.Size = new System.Drawing.Size(75, 23);
+            this.btMediatorPattern.TabIndex = 17;
+            this.btMediatorPattern.Text = "中介者模式";
+            this.btMediatorPattern.UseVisualStyleBackColor = true;
+            this.btMediatorPattern.Click += new System.EventHandler(this.btMediatorPattern_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 399);
+            this.Controls.Add(this.btMediatorPattern);
             this.Controls.Add(this.btIteratorPattern);
             this.Controls.Add(this.btInterpreterPattern);
             this.Controls.Add(this.btCommandPattern);
@@ -276,6 +288,7 @@
         private System.Windows.Forms.Button btCommandPattern;
         private System.Windows.Forms.Button btInterpreterPattern;
         private System.Windows.Forms.Button btIteratorPattern;
+        private System.Windows.Forms.Button btMediatorPattern;
     }
 }
 

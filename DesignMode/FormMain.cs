@@ -18,6 +18,7 @@ using DesignMode.FacadePattern;
 using DesignMode.FilterPattern;
 using DesignMode.InterpreterPattern;
 using DesignMode.IteratorPattern;
+using DesignMode.MediatorPattern;
 using DesignMode.PrototypePattern;
 using DesignMode.ProxyPattern;
 using DesignMode.SingletonPattern;
@@ -398,6 +399,17 @@ namespace DesignMode
                 String name = (String)iter.next();
                 str+="Name : " + name+"\r\n";
             }
+            tbOutWindow.Text = str;
+        }
+
+        private void btMediatorPattern_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            User robert = new User("Robert");
+            User john = new User("John");
+
+            str+=robert.sendMessage("Hi! John!")+"\r\n";
+            str+=john.sendMessage("Hello! Robert!")+"\r\n";
             tbOutWindow.Text = str;
         }
     }

@@ -121,6 +121,8 @@
     <Compile Include="IteratorPattern\IContainer.cs" />
     <Compile Include="IteratorPattern\IIterator.cs" />
     <Compile Include="IteratorPattern\NameRepository.cs" />
+    <Compile Include="MediatorPattern\ChatRoom.cs" />
+    <Compile Include="MediatorPattern\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FactoryModeAndAbstractFactory\Rectangle.cs" />
