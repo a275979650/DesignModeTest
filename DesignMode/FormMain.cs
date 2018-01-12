@@ -19,6 +19,7 @@ using DesignMode.FilterPattern;
 using DesignMode.InterpreterPattern;
 using DesignMode.IteratorPattern;
 using DesignMode.MediatorPattern;
+using DesignMode.MementoPattern;
 using DesignMode.PrototypePattern;
 using DesignMode.ProxyPattern;
 using DesignMode.SingletonPattern;
@@ -410,6 +411,26 @@ namespace DesignMode
 
             str+=robert.sendMessage("Hi! John!")+"\r\n";
             str+=john.sendMessage("Hello! Robert!")+"\r\n";
+            tbOutWindow.Text = str;
+        }
+
+        private void btMementoPattern_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            Originator originator = new Originator();
+            CareTaker careTaker = new CareTaker();
+            originator.State="State #1";
+            originator.State="State #2";
+            careTaker.add(originator.saveStateToMemento());
+            originator.State="State #3";
+            careTaker.add(originator.saveStateToMemento());
+            originator.State="State #4";
+
+            str+="Current State: " + originator.State + "\r\n";
+            originator.getStateFromMemento(careTaker.get(0));
+            str += "First saved State: " + originator.State + "\r\n";
+            originator.getStateFromMemento(careTaker.get(1));
+            str += "Second saved State: " + originator.State + "\r\n";
             tbOutWindow.Text = str;
         }
     }
