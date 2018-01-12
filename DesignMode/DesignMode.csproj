@@ -154,6 +154,11 @@
     <Compile Include="StatePattern\IState.cs" />
     <Compile Include="StatePattern\StartState.cs" />
     <Compile Include="StatePattern\StopState.cs" />
+    <Compile Include="StrategyPattern\Context.cs" />
+    <Compile Include="StrategyPattern\IStrategy.cs" />
+    <Compile Include="StrategyPattern\OperationAdd.cs" />
+    <Compile Include="StrategyPattern\OperationMultiply.cs" />
+    <Compile Include="StrategyPattern\OperationSubstract.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>

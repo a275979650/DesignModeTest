@@ -26,6 +26,8 @@ using DesignMode.PrototypePattern;
 using DesignMode.ProxyPattern;
 using DesignMode.SingletonPattern;
 using DesignMode.StatePattern;
+using DesignMode.StrategyPattern;
+using Context = DesignMode.StatePattern.Context;
 
 namespace DesignMode
 {
@@ -483,6 +485,20 @@ namespace DesignMode
             str += customer2.getName() + "\r\n";
             str += customer3.getName() + "\r\n";
             str += customer4.getName() + "\r\n";
+            tbOutWindow.Text = str;
+        }
+
+        private void btStrategyPattern_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            StrategyPattern.Context context = new StrategyPattern.Context(new OperationAdd());
+            str +="10 + 5 = " + context.executeStrategy(10, 5)+"\r\n";
+
+            context = new StrategyPattern.Context(new OperationSubstract());
+            str += "10 - 5 = " + context.executeStrategy(10, 5)+"\r\n";
+
+            context = new StrategyPattern.Context(new OperationMultiply());
+            str += "10 * 5 = " + context.executeStrategy(10, 5)+"\r\n";
             tbOutWindow.Text = str;
         }
     }

@@ -51,6 +51,7 @@
             this.btObserverPattern = new System.Windows.Forms.Button();
             this.btStatePattern = new System.Windows.Forms.Button();
             this.btNullObjectPattern = new System.Windows.Forms.Button();
+            this.btStrategyPattern = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btFactory
@@ -281,11 +282,22 @@
             this.btNullObjectPattern.UseVisualStyleBackColor = true;
             this.btNullObjectPattern.Click += new System.EventHandler(this.btNullObjectPattern_Click);
             // 
+            // btStrategyPattern
+            // 
+            this.btStrategyPattern.Location = new System.Drawing.Point(347, 141);
+            this.btStrategyPattern.Name = "btStrategyPattern";
+            this.btStrategyPattern.Size = new System.Drawing.Size(75, 23);
+            this.btStrategyPattern.TabIndex = 22;
+            this.btStrategyPattern.Text = "策略模式";
+            this.btStrategyPattern.UseVisualStyleBackColor = true;
+            this.btStrategyPattern.Click += new System.EventHandler(this.btStrategyPattern_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 399);
+            this.Controls.Add(this.btStrategyPattern);
             this.Controls.Add(this.btNullObjectPattern);
             this.Controls.Add(this.btStatePattern);
             this.Controls.Add(this.btObserverPattern);
@@ -341,6 +353,7 @@
         private System.Windows.Forms.Button btObserverPattern;
         private System.Windows.Forms.Button btStatePattern;
         private System.Windows.Forms.Button btNullObjectPattern;
+        private System.Windows.Forms.Button btStrategyPattern;
     }
 }
 
