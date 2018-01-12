@@ -20,6 +20,7 @@ using DesignMode.InterpreterPattern;
 using DesignMode.IteratorPattern;
 using DesignMode.MediatorPattern;
 using DesignMode.MementoPattern;
+using DesignMode.ObserverPattern;
 using DesignMode.PrototypePattern;
 using DesignMode.ProxyPattern;
 using DesignMode.SingletonPattern;
@@ -431,6 +432,22 @@ namespace DesignMode
             str += "First saved State: " + originator.State + "\r\n";
             originator.getStateFromMemento(careTaker.get(1));
             str += "Second saved State: " + originator.State + "\r\n";
+            tbOutWindow.Text = str;
+        }
+
+        private void btObserverPattern_Click(object sender, EventArgs e)
+        {
+            Subject subject = new Subject();
+
+            new HexaObserver(subject);
+            new OctalObserver(subject);
+            new BinaryObserver(subject);
+
+            string str="";
+            str += "First state change: 15\r\n";
+            str += subject.setState(15);
+            str += "Second state change: 10\r\n";
+            str += subject.setState(10);
             tbOutWindow.Text = str;
         }
     }

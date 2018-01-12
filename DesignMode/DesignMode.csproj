@@ -126,6 +126,11 @@
     <Compile Include="MementoPattern\CareTaker.cs" />
     <Compile Include="MementoPattern\Memento.cs" />
     <Compile Include="MementoPattern\Originator.cs" />
+    <Compile Include="ObserverPattern\BinaryObserver.cs" />
+    <Compile Include="ObserverPattern\HexaObserver.cs" />
+    <Compile Include="ObserverPattern\Observer.cs" />
+    <Compile Include="ObserverPattern\OctalObserver.cs" />
+    <Compile Include="ObserverPattern\Subject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FactoryModeAndAbstractFactory\Rectangle.cs" />
