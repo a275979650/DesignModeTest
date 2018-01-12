@@ -159,6 +159,9 @@
     <Compile Include="StrategyPattern\OperationAdd.cs" />
     <Compile Include="StrategyPattern\OperationMultiply.cs" />
     <Compile Include="StrategyPattern\OperationSubstract.cs" />
+    <Compile Include="TemplatePattern\Cricket.cs" />
+    <Compile Include="TemplatePattern\Football.cs" />
+    <Compile Include="TemplatePattern\Game.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>

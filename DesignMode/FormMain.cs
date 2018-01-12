@@ -27,6 +27,7 @@ using DesignMode.ProxyPattern;
 using DesignMode.SingletonPattern;
 using DesignMode.StatePattern;
 using DesignMode.StrategyPattern;
+using DesignMode.TemplatePattern;
 using Context = DesignMode.StatePattern.Context;
 
 namespace DesignMode
@@ -499,6 +500,16 @@ namespace DesignMode
 
             context = new StrategyPattern.Context(new OperationMultiply());
             str += "10 * 5 = " + context.executeStrategy(10, 5)+"\r\n";
+            tbOutWindow.Text = str;
+        }
+
+        private void btTemplatePattern_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            Game game = new Cricket();
+            str+=game.play();
+            game = new Football();
+            str+=game.play();
             tbOutWindow.Text = str;
         }
     }
