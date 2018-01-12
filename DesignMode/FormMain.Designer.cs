@@ -49,6 +49,7 @@
             this.btMediatorPattern = new System.Windows.Forms.Button();
             this.btMementoPattern = new System.Windows.Forms.Button();
             this.btObserverPattern = new System.Windows.Forms.Button();
+            this.btStatePattern = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btFactory
@@ -259,11 +260,22 @@
             this.btObserverPattern.UseVisualStyleBackColor = true;
             this.btObserverPattern.Click += new System.EventHandler(this.btObserverPattern_Click);
             // 
+            // btStatePattern
+            // 
+            this.btStatePattern.Location = new System.Drawing.Point(185, 141);
+            this.btStatePattern.Name = "btStatePattern";
+            this.btStatePattern.Size = new System.Drawing.Size(75, 23);
+            this.btStatePattern.TabIndex = 20;
+            this.btStatePattern.Text = "状态模式";
+            this.btStatePattern.UseVisualStyleBackColor = true;
+            this.btStatePattern.Click += new System.EventHandler(this.btStatePattern_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 399);
+            this.Controls.Add(this.btStatePattern);
             this.Controls.Add(this.btObserverPattern);
             this.Controls.Add(this.btMementoPattern);
             this.Controls.Add(this.btMediatorPattern);
@@ -315,6 +327,7 @@
         private System.Windows.Forms.Button btMediatorPattern;
         private System.Windows.Forms.Button btMementoPattern;
         private System.Windows.Forms.Button btObserverPattern;
+        private System.Windows.Forms.Button btStatePattern;
     }
 }
 

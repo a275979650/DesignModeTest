@@ -24,6 +24,7 @@ using DesignMode.ObserverPattern;
 using DesignMode.PrototypePattern;
 using DesignMode.ProxyPattern;
 using DesignMode.SingletonPattern;
+using DesignMode.StatePattern;
 
 namespace DesignMode
 {
@@ -448,6 +449,23 @@ namespace DesignMode
             str += subject.setState(15);
             str += "Second state change: 10\r\n";
             str += subject.setState(10);
+            tbOutWindow.Text = str;
+        }
+
+        private void btStatePattern_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            Context context = new Context();
+
+            StartState startState = new StartState();
+            str+=startState.doAction(context)+"\r\n";
+
+            str+=context.getState().ToString() + "\r\n";
+
+            StopState stopState = new StopState();
+            str += stopState.doAction(context) + "\r\n";
+
+            str += context.getState().ToString() + "\r\n";
             tbOutWindow.Text = str;
         }
     }

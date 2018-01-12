@@ -146,6 +146,10 @@
     <Compile Include="ProxyPattern\ProxyImage.cs" />
     <Compile Include="ProxyPattern\RealImage.cs" />
     <Compile Include="SingletonPattern\SingleObject.cs" />
+    <Compile Include="StatePattern\Context.cs" />
+    <Compile Include="StatePattern\IState.cs" />
+    <Compile Include="StatePattern\StartState.cs" />
+    <Compile Include="StatePattern\StopState.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
