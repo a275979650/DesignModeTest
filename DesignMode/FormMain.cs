@@ -20,6 +20,7 @@ using DesignMode.InterpreterPattern;
 using DesignMode.IteratorPattern;
 using DesignMode.MediatorPattern;
 using DesignMode.MementoPattern;
+using DesignMode.NullObjectPattern;
 using DesignMode.ObserverPattern;
 using DesignMode.PrototypePattern;
 using DesignMode.ProxyPattern;
@@ -466,6 +467,22 @@ namespace DesignMode
             str += stopState.doAction(context) + "\r\n";
 
             str += context.getState().ToString() + "\r\n";
+            tbOutWindow.Text = str;
+        }
+
+        private void btNullObjectPattern_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            AbstractCustomer customer1 = CustomerFactory.getCustomer("Rob");
+            AbstractCustomer customer2 = CustomerFactory.getCustomer("Bob");
+            AbstractCustomer customer3 = CustomerFactory.getCustomer("Julie");
+            AbstractCustomer customer4 = CustomerFactory.getCustomer("Laura");
+
+            str += "Customers";
+            str += customer1.getName() + "\r\n";
+            str += customer2.getName() + "\r\n";
+            str += customer3.getName() + "\r\n";
+            str += customer4.getName() + "\r\n";
             tbOutWindow.Text = str;
         }
     }

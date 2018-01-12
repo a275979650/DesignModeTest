@@ -126,6 +126,10 @@
     <Compile Include="MementoPattern\CareTaker.cs" />
     <Compile Include="MementoPattern\Memento.cs" />
     <Compile Include="MementoPattern\Originator.cs" />
+    <Compile Include="NullObjectPattern\AbstractCustomer.cs" />
+    <Compile Include="NullObjectPattern\CustomerFactory.cs" />
+    <Compile Include="NullObjectPattern\NullCustomer.cs" />
+    <Compile Include="NullObjectPattern\RealCustomer.cs" />
     <Compile Include="ObserverPattern\BinaryObserver.cs" />
     <Compile Include="ObserverPattern\HexaObserver.cs" />
     <Compile Include="ObserverPattern\Observer.cs" />
