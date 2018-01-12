@@ -53,6 +53,7 @@
             this.btNullObjectPattern = new System.Windows.Forms.Button();
             this.btStrategyPattern = new System.Windows.Forms.Button();
             this.btTemplatePattern = new System.Windows.Forms.Button();
+            this.btVisitorPattern = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btFactory
@@ -67,10 +68,11 @@
             // 
             // tbOutWindow
             // 
-            this.tbOutWindow.Location = new System.Drawing.Point(12, 184);
+            this.tbOutWindow.Location = new System.Drawing.Point(12, 227);
             this.tbOutWindow.Multiline = true;
             this.tbOutWindow.Name = "tbOutWindow";
-            this.tbOutWindow.Size = new System.Drawing.Size(534, 203);
+            this.tbOutWindow.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbOutWindow.Size = new System.Drawing.Size(560, 250);
             this.tbOutWindow.TabIndex = 1;
             // 
             // btAbstractFactory
@@ -303,11 +305,22 @@
             this.btTemplatePattern.UseVisualStyleBackColor = true;
             this.btTemplatePattern.Click += new System.EventHandler(this.btTemplatePattern_Click);
             // 
+            // btVisitorPattern
+            // 
+            this.btVisitorPattern.Location = new System.Drawing.Point(12, 180);
+            this.btVisitorPattern.Name = "btVisitorPattern";
+            this.btVisitorPattern.Size = new System.Drawing.Size(75, 23);
+            this.btVisitorPattern.TabIndex = 24;
+            this.btVisitorPattern.Text = "访问者模式";
+            this.btVisitorPattern.UseVisualStyleBackColor = true;
+            this.btVisitorPattern.Click += new System.EventHandler(this.btVisitorPattern_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 399);
+            this.ClientSize = new System.Drawing.Size(575, 489);
+            this.Controls.Add(this.btVisitorPattern);
             this.Controls.Add(this.btTemplatePattern);
             this.Controls.Add(this.btStrategyPattern);
             this.Controls.Add(this.btNullObjectPattern);
@@ -333,7 +346,9 @@
             this.Controls.Add(this.tbOutWindow);
             this.Controls.Add(this.btAbstractFactory);
             this.Controls.Add(this.btFactory);
+            this.MaximizeBox = false;
             this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "设计模式";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -367,6 +382,7 @@
         private System.Windows.Forms.Button btNullObjectPattern;
         private System.Windows.Forms.Button btStrategyPattern;
         private System.Windows.Forms.Button btTemplatePattern;
+        private System.Windows.Forms.Button btVisitorPattern;
     }
 }
 

@@ -28,7 +28,8 @@ using DesignMode.SingletonPattern;
 using DesignMode.StatePattern;
 using DesignMode.StrategyPattern;
 using DesignMode.TemplatePattern;
-using Context = DesignMode.StatePattern.Context;
+using DesignMode.VisitorPattern;
+
 
 namespace DesignMode
 {
@@ -459,7 +460,7 @@ namespace DesignMode
         private void btStatePattern_Click(object sender, EventArgs e)
         {
             string str = "";
-            Context context = new Context();
+            StatePattern.Context context = new StatePattern.Context();
 
             StartState startState = new StartState();
             str+=startState.doAction(context)+"\r\n";
@@ -511,6 +512,12 @@ namespace DesignMode
             game = new Football();
             str+=game.play();
             tbOutWindow.Text = str;
+        }
+
+        private void btVisitorPattern_Click(object sender, EventArgs e)
+        {
+            IComputerPart computer = new Computer();
+            tbOutWindow.Text = computer.accept(new ComputerPartDisplayVisitor());
         }
     }
 }

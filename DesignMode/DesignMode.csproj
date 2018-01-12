@@ -162,6 +162,13 @@
     <Compile Include="TemplatePattern\Cricket.cs" />
     <Compile Include="TemplatePattern\Football.cs" />
     <Compile Include="TemplatePattern\Game.cs" />
+    <Compile Include="VisitorPattern\Computer.cs" />
+    <Compile Include="VisitorPattern\ComputerPartDisplayVisitor .cs" />
+    <Compile Include="VisitorPattern\IComputerPart.cs" />
+    <Compile Include="VisitorPattern\IComputerPartVisitor.cs" />
+    <Compile Include="VisitorPattern\Keyboard.cs" />
+    <Compile Include="VisitorPattern\Monitor.cs" />
+    <Compile Include="VisitorPattern\Mouse.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
